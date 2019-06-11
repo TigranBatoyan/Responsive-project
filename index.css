@@ -15,12 +15,12 @@ body{
     list-style: none;
     text-align: center;
 }
-.list__li{
+.list__row{
     display: inline;
     margin: 5%;
     text-decoration: underline
 }
-.list__li:hover{
+.list__row:hover{
     background: black;
     color:silver;
     border-radius: 10px;
@@ -53,38 +53,38 @@ body{
     justify-content: space-evenly;
     margin-top: 2%
 }
-.grid__div{
+.grid__column{
     text-align: center
 }
-.grid__div__p{
+.grid__column__content{
     width:100%;
     border:2px solid black;
     border-radius: 10px;
     margin:5% auto;
     background: white
 }
-.grid__div__p:first-child{
+.grid__column__content:first-child{
     width:50%;
     background: gray
 }
-.second{
+.grid__column__content_second{
     display:none
 }
-.grid__div__p:last-child{
+.grid__column__content:last-child{
     width:80%;
 }
 
-@media only screen and (min-width: 480px) and (max-width:768px){
-    .second{
+@media only screen and (max-width:768px){
+    .grid__column__content_second{
         display:block
     }
 }
 
 @media only screen and (max-width:479px){
-    .second{
+    .grid__column__content_second{
         display:none
     }
-    .grid__div__p:last-child{
+    .grid__column__content:last-child{
         display:none
     }
     .grid{
@@ -108,12 +108,12 @@ body{
         top:0;
         right:2%
     }
-    .list__li{
+    .list__row{
         margin: 25%;
         display: block;
         width:100%
     }
-    .list__li:last-child{
+    .list__row:last-child{
         display: none
     }
     .logo__img{
